@@ -27,6 +27,13 @@ with col22:
         "</h3>",
         unsafe_allow_html=True
     )
+    st.markdown(
+        "<h6 style='text-align:center;"
+        "color:white'>"
+        "Yapay zeka sonuçları tamamen doğru olmayabilir"
+        "</h6>",
+        unsafe_allow_html=True
+    )
 
 st.write("---")
 menu1 = option_menu("", ("Film Öneri Sistemi", "Profil Analizi"),
@@ -119,4 +126,5 @@ if menu1 == "Profil Analizi":
             st.balloons()
         if st.button("Kar Yağdır", use_container_width=True):
             st.snow()
+
 
