@@ -1,7 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
 
-
 def get_ai_recommendations(highly_rated_films, common_watchlist, all_watched_films):
     try:
         api_key = st.secrets["GEMINI_API_KEY"]
@@ -11,7 +10,7 @@ def get_ai_recommendations(highly_rated_films, common_watchlist, all_watched_fil
 
     model = genai.GenerativeModel('gemini-2.0-flash')
 
-   prompt = f"""
+    prompt = f"""
 GÖREVİN: Sana vereceğim verilerden ilham alarak, 'YASAKLI LİSTE'de **olmayan** 3 film önermek. 
 Kesinlikle ve hiçbir koşulda yasaklı listedeki filmleri önerme. Eğer yanlışlıkla önerirsen, onu tamamen atla ve başka bir film öner.
 
@@ -34,13 +33,8 @@ VERİLER:
 SADECE yukarıdaki kurallara uygun üç film öner ve her biri için neden seçtiğini açıkla. Başka hiçbir şey ekleme.
 """
 
-
     try:
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
         return f"HATA: Yapay zeka ile iletişim kurulurken bir sorun oluştu: {e}"
-
-
-
-
