@@ -29,8 +29,8 @@ with col22:
     )
     st.markdown(
         "<h6 style='text-align:center;"
-        "color:white'>"
-        "Yapay zeka sonuçları tamamen doğru olmayabilir"
+        "color:grey'>"
+        "(Yapay zeka sonuçları tamamen doğru olmayabilir. Kontrol edin)"
         "</h6>",
         unsafe_allow_html=True
     )
@@ -126,5 +126,6 @@ if menu1 == "Profil Analizi":
             st.balloons()
         if st.button("Kar Yağdır", use_container_width=True):
             st.snow()
+
 
 
