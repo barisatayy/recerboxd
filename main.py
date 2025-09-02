@@ -103,7 +103,7 @@ if menu1 == "Film Öneri Sistemi":
             st.markdown(f'<div class="container-frame">{"<br>".join(results.get("ortak_watchlist", []))}</div>',
                         unsafe_allow_html=True)
         with col444:
-            st.markdown("<h1 style='font-size:25px;text-align:center;color:purple'>Yapay Zeka Önerileri 🔮</h1>",
+            st.markdown("<h1 style='font-size:25px;text-align:center;color:purple'>Yapay Zeka Film Önerileri </h1>",
                         unsafe_allow_html=True)
             ai_response = results.get('ai_recommendations', "Öneri bulunamadı.")
             display_text = ai_response.replace('\n', '<br>')
@@ -119,3 +119,4 @@ if menu1 == "Profil Analizi":
             st.balloons()
         if st.button("Kar Yağdır", use_container_width=True):
             st.snow()
+
