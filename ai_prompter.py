@@ -27,7 +27,7 @@ def get_ai_recommendations(highly_rated_films, common_watchlist, all_watched_fil
     Yukarıdaki analiz verilerinden ilham alarak, 'YASAKLI LİSTE'de olmayan 3 film öner. Her öneri için filmin tam adını kalın harflerle yaz. Bir alt satırda, bu filmi neden seçtiğini, analiz verilerindeki filmlerle bağlantı kurarak detaylı ve ikna edici bir şekilde açıkla. Önerilerinin içeriği kaliteli ve bilgilendirici olsun.
 
     SON KONTROL: Cevabını vermeden önce, önerdiğin 3 filmin de 'YASAKLI LİSTE' içinde olmadığından tekrar emin ol. Bu son ve en önemli kontroldür.
-    Giriş cümlesi falan hiçbir şey yazma. Sadece film önerilerini yap.
+    Giriş cümlesi falan hiçbir şey yazma. Sadece film önerilerini yap. Listeden çıkardığın bir film olursa bunun için bir bilgi verme. Saf çıktın 3 adet film, neden seçtiğin ve film içeriği olsun.
     """
 
     try:
@@ -35,3 +35,4 @@ def get_ai_recommendations(highly_rated_films, common_watchlist, all_watched_fil
         return response.text
     except Exception as e:
         return f"HATA: Yapay zeka ile iletişim kurulurken bir sorun oluştu: {e}"
+
